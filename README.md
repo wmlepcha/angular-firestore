@@ -1,6 +1,75 @@
 # angular-firestore
 A simple form to firestore CRUD booking app
 
+ Angular framework and Firebase for the backend. Let's summarize the key aspects of your project:
+
+**Project Overview:**
+1. **Angular Framework:**
+   - Your project is built using the Angular framework, a popular web development framework maintained by Google.
+   - Angular allows you to create dynamic, single-page web applications with a modular and component-based architecture.
+
+2. **Firebase Integration:**
+   - Firebase is used as the backend service for your application.
+   - Firebase provides various services, including Firestore (a NoSQL database), for storing and retrieving data, as well as authentication, hosting, and more.
+
+**Project Structure:**
+1. **Components:**
+   - Your project consists of multiple Angular components:
+     - `BookingFormComponent`: Handles user input for booking information.
+     - `DashboardComponent`: Displays statistics and information related to bookings.
+     - `UserdataComponent`: Displays user data in a table format.
+     - Other components may be present in your project as well.
+
+2. **Routing:**
+   - Angular routing is used to navigate between different components.
+   - Routes are defined in the `AppRoutingModule` to navigate to the booking form, dashboard, and user data components.
+
+**Functionality:**
+1. **Booking Form:**
+   - Users can fill out a booking form with various fields such as name, contact information, nationality, etc.
+   - The form is created using Angular Reactive Forms, and form validation is implemented.
+
+2. **Firestore Database:**
+   - Bookings data is stored in Firestore, Firebase's NoSQL database.
+   - There are collections such as `bookings`, `bookings-cancelled`, and `bookings-approved` to store different types of bookings.
+
+3. **Real-time Counters:**
+   - You have implemented real-time counters for total bookings, cancelled bookings, and approved bookings.
+   - These counters are stored in Firestore under the `counters` collection.
+
+4. **Services:**
+   - The `SubmissionCountService` is used as a service to manage and update submission counts.
+   - This service is injected into components where counts need to be updated.
+
+**User Interface:**
+1. **HTML Templates:**
+   - HTML templates are used to structure the user interface for each component.
+   - The user data is displayed in a table format in the `UserdataComponent`.
+
+2. **Styling:**
+   - Styling is applied to components using the associated `.scss` files to enhance the visual appearance of the application.
+
+**Overall Flow:**
+1. **Booking Submission:**
+   - Users submit booking forms, and the data is sent to Firestore using the `addDoc` function.
+   - The submission count is updated in real-time using the `SubmissionCountService`.
+
+2. **Dashboard Statistics:**
+   - The `DashboardComponent` fetches and displays real-time statistics for total, cancelled, and approved bookings.
+
+3. **User Data Display:**
+   - The `UserdataComponent` retrieves user data from Firestore and displays it in a table.
+   - Users can cancel or approve bookings, which updates counters and moves the booking to the respective collections.
+
+**Key Technologies and Libraries:**
+- Angular Framework
+- Firebase (Firestore, Authentication, etc.)
+- Reactive Forms
+- RxJS for handling observables
+- SCSS for styling
+
+
+
 app.module.ts
 
 <img width="711" alt="Screenshot 2024-01-02 at 19 30 18" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/1b7f8a46-773a-48f5-b2b2-f7268f75b145">
