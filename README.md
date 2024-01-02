@@ -61,7 +61,6 @@ userdata.component.html
 
 <img width="765" alt="Screenshot 2024-01-02 at 20 12 40" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/0282b1be-cf4b-4b31-9830-61da66b17995">
 
-The part of the code you provided is written using Angular syntax and directives. Let's break down the key components:
 
 1. **Angular Directives:**
    - `*ngFor="let user of userData"`: This is an Angular structural directive called `ngFor`. It is used to iterate over the `userData` array and create a table row (`<tr>`) for each user in the array.
