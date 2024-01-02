@@ -56,3 +56,28 @@ userdata.component.ts
 <img width="765" alt="Screenshot 2024-01-02 at 20 06 30" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/9f13f56e-34bc-46a3-8ebd-a98e9fd7d8c6">
 <img width="765" alt="Screenshot 2024-01-02 at 20 06 38" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/a5d4189d-f2f4-4b50-a8cf-8216df8a8c33">
 <img width="765" alt="Screenshot 2024-01-02 at 20 06 56" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/53f3a21b-9a6d-423a-bcd9-4f9aa64e1b6f">
+
+userdata.component.html
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 12 40" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/0282b1be-cf4b-4b31-9830-61da66b17995">
+
+The part of the code you provided is written using Angular syntax and directives. Let's break down the key components:
+
+1. **Angular Directives:**
+   - `*ngFor="let user of userData"`: This is an Angular structural directive called `ngFor`. It is used to iterate over the `userData` array and create a table row (`<tr>`) for each user in the array.
+
+   - `{{ user.username }}`: This is an example of Angular interpolation. The double curly braces `{{ }}` are used for data binding, displaying the value of `user.username` in the respective table cell (`<td>`). It dynamically binds the value of `user.username` to the HTML content.
+
+   - `(click)="cancelBooking(user)"` and `(click)="approvedBooking(user)"`: These are event bindings. They are used to bind the click event of the icons (❌ and ✔️) to corresponding methods (`cancelBooking` and `approvedBooking`) in the Angular component when the user clicks on the icons.
+
+2. **Binding Expressions:**
+   - The `*ngFor` directive uses a structural directive syntax with an asterisk (`*`). It's a shorthand notation for `<ng-template [ngForOf]="userData" let-user>` where `let-user` is a local variable representing each user in the iteration.
+
+   - The curly braces `{}` are not used as part of the HTML syntax here. However, they are commonly used in Angular to define code blocks or to interpolate values within the template.
+
+3. **Class Binding:**
+   - `class="scroll"`: The `class` attribute is used to apply a CSS class to the `<tbody>` element. The `scroll` class is likely defined in the component's associated styles (CSS or SCSS) and is applied to enable scrolling behavior.
+
+   - `class="red-button"` and `class="green-button"`: These classes are used to style the "❌" and "✔️" icons as red and green buttons, respectively. The styling might be defined in the component's styles.
+
+In summary, the provided code segment demonstrates the usage of Angular directives (`*ngFor`) for iteration, data binding through interpolation (`{{ }}`), and event binding (`(click)`). These Angular-specific features allow for dynamic rendering of data and interaction with the component's methods.
