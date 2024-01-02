@@ -29,3 +29,21 @@ app-routing.module.ts
 
 <img width="765" alt="Screenshot 2024-01-02 at 19 55 27" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/53514f31-5489-4212-9ccb-e5a74202064d">
 
+submission-count.service.ts
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 00 03" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/7ec3ed9a-c5e3-40a1-88a4-c9fd4c602269">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 00 12" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/a41c7d0c-945b-4c1b-8435-644275fe8e68">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 00 20" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/a887c4b6-f316-4b50-9b0b-e58612ebf397">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 00 29" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/c8ab6f20-67a4-46dd-a28c-615c63e29c16">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 00 40" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/97d71afb-53f2-4c07-ab99-f3a2097052c6">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 00 49" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/ab07a67e-4759-4221-b6fe-60201aa34063">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 00 59" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/13d6a733-b5fc-46fc-a9aa-22880b0f1957">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 01 11" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/33ae7737-f894-458f-b7b9-577a7d2f5e03">
+
