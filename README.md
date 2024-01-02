@@ -80,3 +80,45 @@ userdata.component.html
    - `class="red-button"` and `class="green-button"`: These classes are used to style the "❌" and "✔️" icons as red and green buttons, respectively. The styling might be defined in the component's styles.
 
 In summary, the provided code segment demonstrates the usage of Angular directives (`*ngFor`) for iteration, data binding through interpolation (`{{ }}`), and event binding (`(click)`). These Angular-specific features allow for dynamic rendering of data and interaction with the component's methods.
+
+booking-form.component.html
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 17 00" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/c9008aab-7135-43cb-b5a6-5a572c10dc13">
+
+
+1. **Form Tag:**
+   - `<form>`: This is the HTML form element. It binds to the Angular `bookingForm` FormGroup using `[formGroup]="bookingForm"`. The form is submitted when the `submitForm()` method is called through `(ngSubmit)="submitForm()"`. It has the CSS class `bform`.
+
+2. **Form Conditions:**
+   - `*ngIf="!isFormSubmitted; else successMessageTemplate"`: This Angular structural directive (`*ngIf`) conditionally renders the form based on whether `isFormSubmitted` is `false`. If the form has not been submitted (`!isFormSubmitted`), it shows the form; otherwise, it displays the content inside the `else successMessageTemplate`. This is a way to conditionally render different parts of the template.
+
+3. **Form Section:**
+   - `*ngIf="currentSection === 1"`: This conditionally renders the form content inside the `<div class="fwrap">` only when `currentSection` is equal to 1. This allows for displaying different sections of the form based on a variable or condition.
+
+4. **Form Input Field:**
+   - `<input>`: This is an HTML input element for the user to enter their full name. It has attributes like `placeholder` for a hint inside the input field, `type` for the input type, `id` for identification, `formControlName` to bind it to the `username` control in the `bookingForm` FormGroup, and `class` for styling.
+
+5. **Error Message:**
+   - `<div class="text-danger" ...>`: This `<div>` displays an error message if the `username` field is required and has been touched (visited by the user). It uses Angular's `*ngIf` to conditionally show the message. The styling (`style="color: red; font-size: 10px"`) sets the color and font size of the error message.
+
+   - `*ngIf="bookingForm.get('username')?.hasError('required') && bookingForm.get('username')?.touched"`: This condition checks whether the `username` control has the 'required' error and has been touched. If both conditions are true, the error message is displayed.
+
+   - `<i class="fas fa-exclamation-circle"></i>`: This is a Font Awesome icon for an exclamation circle, used to visually indicate an error.
+
+In summary, this code represents an Angular form with dynamic rendering based on conditions and includes input fields, error messages, and conditional display of different sections. The form is structured using Angular directives for form handling and validation.
+
+booking-form.component.ts
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 17 00" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/68db779e-98d6-438b-8042-a4939a7a7f89">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 21 21" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/cac6b597-203a-4d8f-adde-e94ebbf24ded">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 22 39" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/5c7c8063-c079-43dc-976e-6255c99e480d">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 22 49" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/fb2a0bb0-cc05-438e-bb65-7932cc0a4c77">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 22 59" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/3fdf2d1e-0596-41c2-ac9d-fa0fda4cf391">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 23 18" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/115ec501-0528-4442-baf4-7fd8586d1500">
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 23 30" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/3960dedf-340c-46da-8a1d-837287a1127b">
