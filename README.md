@@ -17,6 +17,8 @@ app.module.ts
 
 <img width="765" alt="Screenshot 2024-01-02 at 19 31 47" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/1b8d516d-3adc-407d-9338-996fb0988b0a">
 
+app-routing.module.ts
+
 <img width="765" alt="Screenshot 2024-01-02 at 19 54 43" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/891ce76f-fa39-499d-94b3-2737e3850f0e">
 
 <img width="765" alt="Screenshot 2024-01-02 at 19 54 53" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/defb4e53-3d84-4bfc-9ce2-83b58002a0d1">
