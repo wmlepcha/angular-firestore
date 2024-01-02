@@ -47,3 +47,12 @@ submission-count.service.ts
 
 <img width="765" alt="Screenshot 2024-01-02 at 20 01 11" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/33ae7737-f894-458f-b7b9-577a7d2f5e03">
 
+userdata.component.ts
+
+<img width="765" alt="Screenshot 2024-01-02 at 20 05 48" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/629d8c5b-f0ae-400b-9278-6a5c4b2d31ce">
+<img width="765" alt="Screenshot 2024-01-02 at 20 05 58" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/313ad654-be3b-4e76-a424-73d6448a476e">
+<img width="765" alt="Screenshot 2024-01-02 at 20 06 06" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/4881f393-76d9-4dba-8e19-3a74f566dfca">
+<img width="765" alt="Screenshot 2024-01-02 at 20 06 21" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/8ff02195-cc65-43e3-ad46-0b9e89e895ce">
+<img width="765" alt="Screenshot 2024-01-02 at 20 06 30" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/9f13f56e-34bc-46a3-8ebd-a98e9fd7d8c6">
+<img width="765" alt="Screenshot 2024-01-02 at 20 06 38" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/a5d4189d-f2f4-4b50-a8cf-8216df8a8c33">
+<img width="765" alt="Screenshot 2024-01-02 at 20 06 56" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/53f3a21b-9a6d-423a-bcd9-4f9aa64e1b6f">
