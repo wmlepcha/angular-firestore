@@ -119,6 +119,14 @@ booking-form.component.ts
 
 <img width="765" alt="Screenshot 2024-01-02 at 20 22 59" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/3fdf2d1e-0596-41c2-ac9d-fa0fda4cf391">
 
+
 <img width="765" alt="Screenshot 2024-01-02 at 20 23 18" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/115ec501-0528-4442-baf4-7fd8586d1500">
 
 <img width="765" alt="Screenshot 2024-01-02 at 20 23 30" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/3960dedf-340c-46da-8a1d-837287a1127b">
+
+dashboard.component.ts
+<img width="765" alt="Screenshot 2024-01-02 at 20 32 34" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/7f700ec4-8f39-48b1-bb61-b55dc67f7a01">
+<img width="765" alt="Screenshot 2024-01-02 at 20 32 43" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/898e6c50-40b2-4e16-98b4-18fadadbf0a2">
+<img width="765" alt="Screenshot 2024-01-02 at 20 32 52" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/7efadda8-d756-43ed-bb8c-951aedef9356">
+<img width="765" alt="Screenshot 2024-01-02 at 20 33 05" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/a8a690f8-d1f0-49fd-a782-21bde1c07243">
+<img width="765" alt="Screenshot 2024-01-02 at 20 33 26" src="https://github.com/wmlepcha/angular-firestore/assets/64000173/15c88574-0677-463b-9162-027f7dd5ea46">
