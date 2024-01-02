@@ -13,6 +13,7 @@ import {
 } from '@angular/fire/firestore';
 
 import { Observable } from 'rxjs';
+import { SubmissionCountService } from '../submission-count.service';
 
 @Component({
   selector: 'app-userdata',
@@ -23,7 +24,10 @@ export class UserdataComponent {
   userData: any[] = [];
   userIDs: string[] = []; // Array to store unique IDs
 
-  constructor(private firestore: Firestore) {
+  constructor(
+    private firestore: Firestore,
+    private submissionCountService: SubmissionCountService
+  ) {
     this.getData();
   }
 
@@ -58,6 +62,7 @@ export class UserdataComponent {
         const bookingSnapshot = await getDoc(bookingDocRef);
 
         if (bookingSnapshot.exists()) {
+          this.submissionCountService.incrementCancelledCount();
           const bookingData = bookingSnapshot.data();
 
           // Add the booking to the cancelled bookings collection
@@ -77,6 +82,7 @@ export class UserdataComponent {
       console.error('Error canceling booking:', error);
     }
   }
+
   async approvedBooking(user: any) {
     const originalCollection = collection(this.firestore, 'bookings');
     const cancelledCollection = collection(this.firestore, 'bookings-approved');
@@ -91,7 +97,7 @@ export class UserdataComponent {
 
         if (bookingSnapshot.exists()) {
           const bookingData = bookingSnapshot.data();
-
+          this.submissionCountService.incrementApprovedCount();
           // Add the booking to the cancelled bookings collection
           const newCancelledDocRef = doc(cancelledCollection);
           await setDoc(newCancelledDocRef, bookingData);

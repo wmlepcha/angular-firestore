@@ -5,7 +5,11 @@ import {
   Firestore,
   addDoc,
   collection,
+  doc,
+  getDoc,
   getDocs,
+  onSnapshot,
+  setDoc,
 } from '@angular/fire/firestore';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'; // Import the necessary modules
 import {} from 'firebase/firestore';
@@ -19,23 +23,54 @@ import { SubmissionCountService } from '../submission-count.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  totalVisitors: number = 0;
+  totalBookings: number = 0;
+  cancelledBookings: number = 0;
+  approvedBookings: number = 0;
 
-  constructor(
-    private firestore: Firestore,
-    private submissionCountService: SubmissionCountService,
-    private cd: ChangeDetectorRef
-  ) {}
+  constructor(private firestore: Firestore) {}
 
   ngOnInit() {
-    // console.log('Before getting count:', this.submissionCount);
-    // this.submissionCount = this.submissionCountService.getCount();
-    // console.log('After getting count:', this.submissionCount);
-    this.submissionCountService.getCount().subscribe((count) => {
-      this.totalVisitors = count;
+    // Read total bookings count from Firestore
+    const countersCollectionRef = collection(this.firestore, 'counters');
+    const bookingsCountDocRef = doc(countersCollectionRef, 'bookingsCount');
+    const cancelledCountDocRef = doc(
+      countersCollectionRef,
+      'cancelledBookingsCount'
+    );
+    const approvedCountDocRef = doc(
+      countersCollectionRef,
+      'approvedBookingsCount'
+    );
 
-      // Manually trigger change detection
-      this.cd.detectChanges();
+    onSnapshot(bookingsCountDocRef, (doc) => {
+      if (doc.exists()) {
+        const data = doc.data() as { count: number };
+        this.totalBookings = data.count;
+
+        console.log('Total Bookings Updated:', this.totalBookings);
+      } else {
+        console.log('Document does not exist.');
+      }
+    });
+    onSnapshot(cancelledCountDocRef, (doc) => {
+      if (doc.exists()) {
+        const data = doc.data() as { count: number };
+        this.cancelledBookings = data.count;
+
+        console.log('Total Bookings Updated:', this.cancelledBookings);
+      } else {
+        console.log('Document does not exist.');
+      }
+    });
+    onSnapshot(approvedCountDocRef, (doc) => {
+      if (doc.exists()) {
+        const data = doc.data() as { count: number };
+        this.approvedBookings = data.count;
+
+        console.log('Total Bookings Updated:', this.approvedBookings);
+      } else {
+        console.log('Document does not exist.');
+      }
     });
   }
 }

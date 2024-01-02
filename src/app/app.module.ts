@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -11,7 +10,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserdataComponent } from './userdata/userdata.component';
 import { SubmissionCountService } from './submission-count.service';
-import { CountVisitorsComponent } from './count-visitors/count-visitors.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +17,6 @@ import { CountVisitorsComponent } from './count-visitors/count-visitors.componen
     BookingFormComponent,
     DashboardComponent,
     UserdataComponent,
-    CountVisitorsComponent,
   ],
   imports: [
     FormsModule,

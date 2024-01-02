@@ -3,7 +3,6 @@ import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'; // Import the necessary modules
 import {} from 'firebase/firestore';
 import { ChangeDetectorRef } from '@angular/core';
-
 import { Observable } from 'rxjs';
 import { SubmissionCountService } from '../submission-count.service';
 
@@ -14,7 +13,10 @@ import { SubmissionCountService } from '../submission-count.service';
 })
 export class BookingFormComponent {
   bookingForm: FormGroup; // Declare a FormGroup for your form
-
+  currentSection: number = 1;
+  totalSections: number = 2;
+  isFormSubmitted: boolean = false;
+  submittedUserData: any;
   constructor(
     private firestore: Firestore,
     private fb: FormBuilder,
@@ -35,15 +37,28 @@ export class BookingFormComponent {
     });
   }
   ngOnInit() {}
-
+  nextSection() {
+    if (this.currentSection < this.totalSections) {
+      this.currentSection++;
+    }
+  }
+  previousSection() {
+    if (this.currentSection > 1) {
+      this.currentSection--;
+    }
+  }
   submitForm() {
-    this.submissionCountService.incrementCount();
     if (this.bookingForm.valid) {
+      this.submissionCountService.incrementCount();
       console.log(
         'Count after increment:',
         this.submissionCountService.getCount()
       );
-      this.cd.detectChanges();
+      console.log(
+        'Count after increment:',
+        this.submissionCountService.getCount()
+      );
+
       const formData = this.bookingForm.value;
 
       // Create a reference to the Firestore collection
@@ -52,6 +67,8 @@ export class BookingFormComponent {
       // Use the addDoc function to add the form data to the collection
       addDoc(collectionRef, formData)
         .then(() => {
+          this.isFormSubmitted = true;
+          this.submittedUserData = formData;
           console.log('Document written with ID:');
         })
         .catch((error) => {
